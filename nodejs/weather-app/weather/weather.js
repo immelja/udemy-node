@@ -1,18 +1,18 @@
 var request = require('request')
 
-var getWeather = () => {
+var getWeather = (lat,long,callback) => {
 
     request({
-        url: 'https://api.darksky.net/forecast/54a2092fccb378d9b2ae9057e4a5fe59/-37.69312499999999,145.1306603?units=auto'
+        url: `https://api.darksky.net/forecast/54a2092fccb378d9b2ae9057e4a5fe59/${lat},${long}?units=auto`
         ,json: true
 
     },(error,response,body) => {
         if (error) {
-            console.log(error)
+            callback(error)
         } else if (response.statusCode === 200) {
-            console.log(body.currently.temperature)
+            callback(undefined,body)
         } else {
-        console.log(response.statusCode)
+        callback(response.statusCode)
     }
 })
 }

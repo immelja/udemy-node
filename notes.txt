@@ -3,14 +3,11 @@ https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/v4/content
 
 https://maps.googleapis.com/maps/api/geocode/json?address=28 covala court st helena
 
-https://maps.googleapis.com/maps/api/geocode/json?address=241 blackshaws road altona north
-
 https://dashboard.heroku.com/apps
 heroku --help
 heroku login
 heroku keys:add
 heroku keys
 heroku keys:remove
-
 
 
